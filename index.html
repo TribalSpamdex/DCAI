@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#020605"><title>Darts Coach AI V0.6.41-dev</title>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#020605"><title>Darts Coach AI V0.6.46-dev</title>
 <style>
 :root{--bg:var(--dc-t0,#020605);--panel:var(--dc-t1,#0d1814);--panel2:var(--dc-t2,#14231d);--line:var(--dc-t3,#29463b);--green:var(--dc-t4,#7fffb8);--text:#f3fbf7;--muted:var(--dc-t5,#9fb7af);--red:#db7777}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font:15px Arial,sans-serif}button,input,textarea{font:inherit}button{border:0;border-radius:10px;background:var(--green);color:var(--dc-t6,#102019);padding:13px;font-weight:700;cursor:pointer}button.secondary{background:#3b4e60;color:#fff}button.danger{background:var(--red);color:white}button:disabled{opacity:.4}header{padding:19px 12px;text-align:center;background:#192633}header h1{margin:0;font-size:26px;color:var(--green)}header small{display:block;margin-top:6px;color:var(--muted)}nav{display:flex;position:sticky;top:0;z-index:10;background:#192633;border-top:1px solid #344656}nav button{flex:1;border-radius:0;background:transparent;color:#bbcbd7;padding:13px 3px;font-size:13px}nav button.selected{color:var(--green);border-bottom:2px solid var(--green)}section{padding-bottom:25px}.card{background:var(--panel);margin:12px;border-radius:16px;padding:16px}h2{margin:0 0 14px;font-size:20px}h3{color:var(--green);font-size:16px}p{line-height:1.5}.muted{color:var(--muted)}.hidden{display:none!important}.primary{width:100%;padding:18px;font-size:17px}.row{display:flex;gap:8px;flex-wrap:wrap;margin:9px 0}.row button{flex:1;min-width:75px}.big{font-size:43px;color:var(--green);font-weight:800;text-align:center;margin:12px 0}.hero{text-align:center;padding:25px 12px}.heroIcon{font-size:43px;margin-bottom:10px}.hero h2{font-size:27px;margin-bottom:9px}.hero p{color:var(--muted)}.info{background:var(--panel2);padding:12px;border-radius:9px;margin:10px 0;line-height:1.5}.progress{height:7px;background:#35495a;border-radius:20px;overflow:hidden}.progress div{height:100%;background:var(--green);width:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.metric{padding:12px 5px;text-align:center;background:var(--panel2);border-radius:9px}.metric strong{display:block;font-size:24px;color:var(--green)}.metric small{display:block;font-size:11px;color:var(--muted);margin-top:6px}.dayRow{display:flex;gap:5px;flex-wrap:wrap}.dayRow label{flex:1;min-width:70px;background:var(--panel2);border-radius:8px;padding:12px 4px;text-align:center}input[type=checkbox]{accent-color:var(--green)}input[type=number]{padding:13px;border:0;border-radius:9px;max-width:100%;background:white;color:#111;font-size:18px}.entry{padding:13px 0;border-bottom:1px solid var(--line)}.tag{display:inline-block;padding:6px 9px;background:#364a5b;border-radius:8px;font-size:12px;color:#d9e7ee}.rule{line-height:1.4;color:#d8e7ed;white-space:pre-line}.targetGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;margin:7px 0}.targetGrid div{text-align:center;background:var(--panel2);border-radius:8px;padding:7px 2px;font-size:11px}.targetGrid div.active{outline:2px solid var(--green)}.targetGrid strong{display:block;font-size:16px;color:var(--green);margin-top:3px}.rulePanel{background:var(--panel2);padding:11px;border-radius:10px;margin:10px 0}.center{text-align:center}.statLine{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #3d5060;padding:10px 0}.statLine span:last-child{text-align:right}button.linklike{background:transparent;color:var(--muted);padding:10px}.resultCard{padding:17px;background:var(--dc-t7,#294639);border-radius:13px;text-align:center}.resultCard strong{color:var(--green);font-size:20px}input[type=file]{max-width:100%;margin:12px 0}.backupText{display:block;width:100%;min-height:160px;max-height:380px;resize:vertical;overflow:auto;margin:12px 0;padding:12px;background:#0e1822;color:#e9f5f8;border:1px solid var(--line);border-radius:10px;font-size:12px;font-family:monospace;line-height:1.45}.backupStatus{padding:11px;border-radius:9px;background:var(--panel2);color:var(--muted);margin:10px 0;line-height:1.5;font-size:13px}.backupStatus.ok{color:var(--green)}.backupStatus.error{color:#ffabab}.backupActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.backupHelp{color:var(--muted);font-size:12px;line-height:1.6}.backupDivider{border:0;border-top:1px solid var(--line);margin:22px 0}
@@ -973,7 +973,7 @@ html[data-appearance=light] body nav[aria-label="Main navigation"]:not(#dc590a):
 <p>Clear all test sessions, games, statistics, assessments, assessment history and coaching progress. Your training days and throwing hand stay saved. After resetting, choose the full assessment or Quick Start to begin training.</p>
 <p><strong>Permanent action.</strong> Make a JSON backup first. Reset asks for one confirmation.</p>
 <button class="danger" onclick="resetTrainingStatistics()">Reset Everything</button><div id="resetMessage" aria-live="polite">No statistics have been reset.</div>
-</div><p class="appVersionInfo" style="text-align:center;margin:20px 14px">Darts Coach · AI V0.6.41-dev</p></section>
+</div><p class="appVersionInfo" style="text-align:center;margin:20px 14px">Darts Coach · AI V0.6.46-dev</p></section>
 <div id="checkoutDartPicker" class="hidden" role="dialog" aria-modal="true" aria-labelledby="checkoutPickerTitle"><div class="checkoutPickerCard"><h2 id="checkoutPickerTitle">How many darts to check out?</h2><p id="checkoutPickerSubtitle">Choose the number of darts you actually threw. Your final dart must have hit a double or bullseye.</p><div id="checkoutChoices" class="checkoutChoices"><button type="button" onclick="chooseCheckoutDarts(1)">1</button><button type="button" onclick="chooseCheckoutDarts(2)">2</button><button type="button" onclick="chooseCheckoutDarts(3)">3</button></div><button type="button" class="checkoutConfirm primary" id="checkoutConfirmBtn" onclick="confirmCheckoutDarts()" disabled>Confirm Checkout</button><button type="button" class="checkoutSecondary" id="checkoutBustBtn" onclick="checkoutDidNotFinish()">Bust / Didn't finish on a double</button><button type="button" class="checkoutSecondary" onclick="closeCheckoutDartPicker()">Cancel · Go back</button><p class="checkoutNote" id="checkoutPickerNote">Select 1, 2 or 3 darts to confirm the finish.</p></div></div><dialog id="dcRC2Reset" aria-labelledby="dcRC2ResetTitle" style="color:var(--text);background:#080c0a;border:1px solid #29463b;border-radius:18px;padding:24px;max-width:calc(100% - 32px);width:400px">
 <h2 id="dcRC2ResetTitle">Reset all data?</h2><p>Are you sure you want to delete all your training data, statistics and progress?</p><p>This action cannot be undone.</p><div class="row"><button id="dcRC2ResetNo" type="button" onclick="document.getElementById('dcRC2Reset').close()">No</button><button class="danger" type="button" onclick="dcRC2ConfirmReset()">Yes, delete</button></div></dialog>
 <script>
@@ -3845,12 +3845,12 @@ function generateSession(extra=false,skipWarmup=false){
  const unified=dc39UnifiedDecision(extra),wholePolicy=unified.policy;
  const chosen=chooseSessionGames(focus,count,wholePolicy,!extra);
  const dayIntent=coach62Intent(unified);
- if(dayIntent.dcaiAuto&&(extra||(data.sessions||[]).some(s=>s?.coachDayIntent?.dcaiAuto?.at===dayIntent.dcaiAuto.at))){delete dayIntent.dcaiAuto;dayIntent.focus=null;}
+ if(dayIntent.dcaiAuto&&(dayIntent.dcaiAuto.version===2||extra||(data.sessions||[]).some(s=>s?.coachDayIntent?.dcaiAuto?.at===dayIntent.dcaiAuto.at))){delete dayIntent.dcaiAuto;dayIntent.focus=null;}
  // DCAI: confirmed priority may break a balanced-plan tie, never override measured need.
  try{const now=Date.now(),facts=window.DCAIIntelligence.memoryRead(localStorage.getItem('dcaiConfirmedFactsV1'));
  const priority=window.DCAIGoals.decide({facts,now,intent:dayIntent,stored:!!coach62StoredIntent(now),extra,trial:!!chosen.exploration?.trial,mastery:!!unified.masteryDecision,evidence:coach61Evidence(now),policy:wholePolicy,practice:coach62Practice(now,now-7*DAY_MS)});
  if(priority&&!window.DCAIFeedback.reviewPriority(data,priority,now).hold){dayIntent.focus=priority.key;dayIntent.dcaiPriority={at:priority.at,reason:priority.reason};}
- const auto=window.DCAIAutonomy.decide({player:data,F:window.DCAIFeedback,now,intent:dayIntent,stored:!!coach62StoredIntent(now),extra,trial:!!chosen.exploration?.trial,mastery:!!unified.masteryDecision,preference:window.DCAIGoals.preference(facts,now),evidence:coach61Evidence(now),policy:wholePolicy,practice:coach62Practice(now,now-7*DAY_MS)});
+ const auto=window.DCAIAutonomy.decide({player:data,F:window.DCAIFeedback,now,intent:dayIntent,stored:!!coach62StoredIntent(now),extra,trial:!!chosen.exploration?.trial,mastery:!!unified.masteryDecision,preference:window.DCAIGoals.preference(facts,now),evidence:coach61Evidence(now),policy:wholePolicy,practice:coach62Practice(now,now-7*DAY_MS),availableKeys:chosen.filter(n=>!DC10_MEASUREMENT_GAMES.has(n)&&n!=='Target Mastery').map(dc28GameCategory)});
  const careerRows=auto?window.DCAICareer.ledger(data,window.DCAIFeedback,dc28GameCategory,now):[];
  const approvedAuto=window.DCAICareer.gate(auto,careerRows,window.DCAIDevelopment.competition(facts,now),now);
  if(approvedAuto){dayIntent.focus=approvedAuto.key;dayIntent.dcaiAuto=approvedAuto;}
@@ -3878,7 +3878,7 @@ function generateSession(extra=false,skipWarmup=false){
  const profiles=dc18ChallengeProfiles(chosen);
  const lengths=chosen.map((name,i)=>dc32GameMinutes(name,i,wholePolicy,profiles));
  if(need&&dayIntent.dcaiAuto&&!chosen.exploration?.trial){
-  const shifted=window.DCAIAutonomy.transfer(chosen,lengths,need.key,dc28GameCategory);if(shifted)lengths.splice(0,lengths.length,...shifted);
+  if(dayIntent.dcaiAuto.version!==2){const shifted=window.DCAIAutonomy.transfer(chosen,lengths,need.key,dc28GameCategory);if(shifted)lengths.splice(0,lengths.length,...shifted);}
  }else if(need&&!chosen.exploration?.trial){
   const receiver=chosen.findIndex(n=>dc28GameCategory(n)===need.key);
   const donor=lengths.map((m,i)=>({m,i})).filter(x=>x.i!==receiver&&x.m>=10&&dc28GameCategory(chosen[x.i])!==need.key).sort((a,b)=>b.m-a.m)[0]?.i??-1;
@@ -4161,7 +4161,7 @@ function allocateRemaining(s){
  }else if(mastery)mastery.seconds+=remaining-(review?300:0)-mastery.seconds;
  else if(review)review.seconds=300;
  // Calculate actual final minutes, after the scheduler has met the clock budget.
- dc43LearningTransfer(s,queue);
+ const baseTransfer=dc43LearningTransfer(s,queue);
  if(!s.unifiedAudit?.exploration?.trial&&!queue.some(e=>e.dc47TrialId)){
   // Split long practice into complementary games while preserving category time.
   const recent=dc22GamesPlayedToday();
@@ -4185,6 +4185,13 @@ function allocateRemaining(s){
   for(const e of s.plan.slice(s.index))if(e.wholeCoach)e.wholeCoach.plannedMinutes=e.seconds/60;
   if(s.wholeSessionAudit)s.wholeSessionAudit.actualScheduledChoices=s.plan.slice(s.index).filter(e=>e.wholeCoach).map(e=>({game:e.name,category:e.wholeCoach.category,minutes:e.seconds/60}));
  }
+ // Optional DCAI transfer is made once, at the final clock allocation.
+ // The base scheduler and previously authorised learning transfer take priority.
+ try{if(s.coachDayIntent?.dcaiAuto?.version===2){
+  const facts=window.DCAIIntelligence.memoryRead(localStorage.getItem('dcaiConfirmedFactsV1'));
+  const applied=window.DCAIAutonomy.applyFinal(s,s.plan.slice(s.index),dc28GameCategory,[...DC10_MEASUREMENT_GAMES,'Target Mastery','Review','Warm-up','Big Singles'],baseTransfer,window.DCAIDevelopment.competition(facts,Date.now()),Date.now());
+  if(s.wholeSessionAudit&&applied){s.wholeSessionAudit.dcaiAutoAllocation=clone(applied);s.wholeSessionAudit.actualScheduledChoices=s.plan.slice(s.index).filter(e=>e.wholeCoach).map(e=>({game:e.name,category:e.wholeCoach.category,minutes:e.seconds/60}));}
+ }}catch(e){/* Preserve the already balanced base allocation. */}
  s.allocated=true;dc45LockAllocation(s);
 }
 function startExercise(){const s=session();if(!s)return;if(s.index>=s.plan.length){finishSession(true);return}let item=currentExercise();if(item.name!=="Warm-up"&&item.name!=="Big Singles"&&!s.allocated)allocateRemaining(s);item=currentExercise();if(!item){finishSession(true);return}s.phase="rules";if(!s.pausedAt)s.pausedAt=Date.now();s.activityStarted=null;s.activityAccumulated=0;s.round=1;s.roundsCompleted=0;s.lastRoundUndo=null;dc45EnsureProvenance(s);activeGame=buildGame(item.name);data.game=activeGame;undoSnapshot=null;save(false)}
@@ -7879,7 +7886,7 @@ performCoachReview();checkCompletedBlocks();setInterval(trainingTimer,500);setIn
 
 </script><div id="welcomeOverlay" class="welcomeOverlay hidden" role="dialog" aria-modal="true" aria-labelledby="welcomeHeading">
  <div class="welcomePanel dc36InfoPanel">
-  <div class="dc36InfoKicker"><span class="dc36InfoGem">✦</span> BUILT FOR BETTER DARTS <span class="dc36InfoVersion">AI V0.6.41-dev</span></div>
+  <div class="dc36InfoKicker"><span class="dc36InfoGem">✦</span> BUILT FOR BETTER DARTS <span class="dc36InfoVersion">AI V0.6.46-dev</span></div>
   <h2 id="welcomeHeading">Your game.<br><span>Your next level.</span></h2>
   <p class="dc36InfoLead">Darts Coach combines structured practice, measurable results and an adaptive training planner. It gives you a purposeful session, then learns cautiously from what you actually complete.</p>
   <div class="dc36InfoStats"><div><strong>41</strong><small>Training games</small></div><div><strong>7</strong><small>Hidden skill levels</small></div><div><strong>60</strong><small>Minute core session</small></div></div>
@@ -8427,8 +8434,13 @@ const api={preference,decide};if(typeof module!=='undefined')module.exports=api;
 })(globalThis);
 </script><script>(function(){const refresh=()=>{try{const e=document.getElementById('dcaiPriorityStatus'),p=DCAIGoals.preference(DCAIIntelligence.memoryRead(localStorage.getItem('dcaiConfirmedFactsV1'))),i=coach62StoredIntent();e.textContent=(p&&p.key!=='balanced'?'Requested priority: '+p.key+'. Applies only if coaching checks allow.':'No active personal training priority.')+(i?.dcaiPriority?' Today’s recorded priority: '+i.focus+'.':'');}catch{}};const old=renderAll;renderAll=function(){const r=old.apply(this,arguments);refresh();return r};document.getElementById('aiFoundation').addEventListener('close',refresh);refresh()})();</script><script>
 (function(root){'use strict';
-const DAY=86400000, keys=['scoring','bull'];
+const DAY=86400000, keys=['scoring','bull','doubles','checkout'];
+const assessmentKey=k=>k==='doubles'||k==='checkout';
+const windowDays=k=>assessmentKey(k)?112:28;
+const minDays=k=>assessmentKey(k)?3:7;
+const threshold=k=>k==='scoring'?5:k==='doubles'?.15:k==='checkout'?.25:.1;
 function observations(player,key,start,end){
+ if(assessmentKey(key)){const U=typeof module!=='undefined'?require('./autonomy'):root.DCAIAutonomy;if(!U||!Number.isFinite(start)||!Number.isFinite(end)||end<=start)return [];const raw=U.assessmentRows(player,key,end-1,Math.ceil((end-start)/DAY)+1).filter(r=>r.at>=start&&r.at<end),rows=[];for(const row of raw)if(!rows.length||row.at-rows.at(-1).at>=14*DAY)rows.push(row);return rows;}
  const days=new Map();
  for(const g of Array.isArray(player?.games)?player.games:[]){
  if(!g||g.quick||g.recovery||g.challengeTuning||g.completion!=='natural'||!Number.isFinite(g.at)||g.at<start||g.at>=end)continue;
@@ -8440,12 +8452,29 @@ function observations(player,key,start,end){
  }return [...days.values()].filter(r=>!r.conflict).sort((a,b)=>a.at-b.at);
 }
 const mean=a=>a.length?a.reduce((s,r)=>s+r.value,0)/a.length:null;
-function classify(key,a,b){const old=mean(a),recent=mean(b),delta=old===null||recent===null?null:recent-old;let state='insufficient';if(a.length>=7&&b.length>=7){const cut=Math.floor(b.length/2),threshold=key==='scoring'?5:.1;const halves=[mean(b.slice(0,cut))-old,mean(b.slice(cut))-old];state=halves.every(v=>v>=threshold-1e-10)?'higher':halves.every(v=>v<=-threshold+1e-10)?'lower':'mixed';}return {key,previousDays:a.length,recentDays:b.length,previous:old,recent,delta,state};}
-function compare(player,key,now=Date.now()){if(!keys.includes(key))return null;return classify(key,observations(player,key,now-56*DAY,now-28*DAY),observations(player,key,now-28*DAY,now+1));}
-function reviewPriority(player,priority,now=Date.now()){if(!priority||!keys.includes(priority.key)||!Number.isFinite(priority.at)||priority.at>now)return {hold:false};const candidates=(Array.isArray(player?.sessions)?player.sessions:[]).filter(x=>x?.completed===true&&!x.quick&&!x.extra&&x.coachDayIntent?.focus===priority.key&&x.coachDayIntent?.dcaiPriority?.at===priority.at&&Number.isFinite(x.start)&&x.start>=priority.at&&x.start<=now);const count=new Set(candidates.map(x=>new Date(x.start).toDateString())).size;if(count<5)return {hold:false,count,state:'insufficient'};const start=Math.min(...candidates.map(x=>x.start));const dayStart=new Date(start);dayStart.setHours(0,0,0,0);const nextDay=new Date(dayStart);nextDay.setDate(nextDay.getDate()+1);const r=classify(priority.key,observations(player,priority.key,+dayStart-28*DAY,+dayStart),observations(player,priority.key,+nextDay,now+1));return {hold:r.state==='lower',count,state:r.state};}
-function report(player,now=Date.now()){return keys.map(k=>{const r=compare(player,k,now),unit=v=>k==='bull'?(v*100).toFixed(1)+'% inner bull':v.toFixed(1)+' points/visit';return `${k==='bull'?'Bull accuracy':'Scoring'}: ${r.recentDays} comparable practice days${r.recent===null?'':', '+unit(r.recent)}. ${r.state==='higher'?'Repeated recent scores are higher.':r.state==='insufficient'?'Building comparable evidence.':'Continue balanced practice.'}`;}).join('\n');}
+function classify(key,a,b){
+ const old=mean(a),recent=mean(b),delta=old===null||recent===null?null:recent-old;let state='insufficient';
+ const separated=r=>r.length>=minDays(key)&&(!assessmentKey(key)||r.at(-1).at-r[0].at>=42*DAY);
+ if(separated(a)&&separated(b)){const cut=Math.floor(b.length/2),limit=threshold(key);const halves=[mean(b.slice(0,cut))-old,mean(b.slice(cut))-old];state=halves.every(v=>v>=limit-1e-10)?'higher':halves.every(v=>v<=-limit+1e-10)?'lower':'mixed';}
+ return {key,previousDays:a.length,recentDays:b.length,previous:old,recent,delta,state,latestAt:b.at(-1)?.at??null};
+}
+function compare(player,key,now=Date.now()){
+ if(!keys.includes(key))return null;
+ if(assessmentKey(key)){
+  // Use one canonical set for both windows; never count a date twice or
+  // permit closely repeated assessments to manufacture independent evidence.
+  const midnight=new Date(now);midnight.setHours(0,0,0,0);
+  const boundary=new Date(midnight);boundary.setDate(boundary.getDate()-windowDays(key));const cut=+boundary;boundary.setDate(boundary.getDate()-windowDays(key));const start=+boundary;
+  const raw=observations(player,key,start,now+1),rows=[];
+  for(const row of raw)if(!rows.length||row.at-rows.at(-1).at>=14*DAY)rows.push(row);
+  return classify(key,rows.filter(r=>r.at<cut),rows.filter(r=>r.at>=cut));
+ }
+ return classify(key,observations(player,key,now-56*DAY,now-28*DAY),observations(player,key,now-28*DAY,now+1));
+}
+function reviewPriority(player,priority,now=Date.now()){if(!priority||!['scoring','bull'].includes(priority.key)||!Number.isFinite(priority.at)||priority.at>now)return {hold:false};const candidates=(Array.isArray(player?.sessions)?player.sessions:[]).filter(x=>x?.completed===true&&!x.quick&&!x.extra&&x.coachDayIntent?.focus===priority.key&&x.coachDayIntent?.dcaiPriority?.at===priority.at&&Number.isFinite(x.start)&&x.start>=priority.at&&x.start<=now);const count=new Set(candidates.map(x=>new Date(x.start).toDateString())).size;if(count<5)return {hold:false,count,state:'insufficient'};const start=Math.min(...candidates.map(x=>x.start));const dayStart=new Date(start);dayStart.setHours(0,0,0,0);const nextDay=new Date(dayStart);nextDay.setDate(nextDay.getDate()+1);const r=classify(priority.key,observations(player,priority.key,+dayStart-28*DAY,+dayStart),observations(player,priority.key,+nextDay,now+1));return {hold:r.state==='lower',count,state:r.state};}
+function report(player,now=Date.now()){return ['scoring','bull'].map(k=>{const r=compare(player,k,now),unit=v=>k==='bull'?(v*100).toFixed(1)+'% inner bull':v.toFixed(1)+' points/visit';return `${k==='bull'?'Bull accuracy':'Scoring'}: ${r.recentDays} comparable practice days${r.recent===null?'':', '+unit(r.recent)}. ${r.state==='higher'?'Repeated recent scores are higher.':r.state==='insufficient'?'Building comparable evidence.':'Continue balanced practice.'}`;}).join('\n');}
 function command(q){const m=/^(?:i want to focus on|focus my training on|prioritise|prioritize)\s+(scoring|doubles|checkouts?|bull|balanced)[.!?]*$/i.exec(String(q).trim());return m?'Training priority: '+m[1].toLowerCase().replace('checkouts','checkout'):null;}
-const api={observations,compare,reviewPriority,report,command};if(typeof module!=='undefined')module.exports=api;else root.DCAIFeedback=Object.freeze(api);
+const api={windowDays,minDays,threshold,classify,observations,compare,reviewPriority,report,command};if(typeof module!=='undefined')module.exports=api;else root.DCAIFeedback=Object.freeze(api);
 })(globalThis);
 </script><script>
 (function(root){'use strict';
@@ -8466,30 +8495,142 @@ const api={goal,competition,progress,comparison,profile,report,date};if(typeof m
 </script><script>(function(){'use strict';const $=id=>document.getElementById(id),D=window.DCAIDevelopment,C=window.DCAIIntelligence;function save(kind,value){$('dcaiMemoryKind').value=kind;$('dcaiMemoryText').value=value;$('dcaiMemoryAdd').click();refresh();}function validDate(id){const v=$(id).value;if(D.date(v)===null){$('dcaiStatus').textContent='Choose a valid date.';return null;}return v;} $('dcaiGoalSave').onclick=()=>{const n=Number($('dcaiGoalHits').value),v=validDate('dcaiGoalDate');if(!v||!Number.isInteger(n)||n<1||n>60){$('dcaiStatus').textContent='Choose 1–60 hits and a valid date.';return;}save('goals',`Big singles goal: ${n}/60 by ${v}`);};$('dcaiCompetitionSave').onclick=()=>{const v=validDate('dcaiCompetitionDate');if(v)save('competition','Competition date: '+v);};$('dcaiChangeSave').onclick=()=>{const v=validDate('dcaiReviewDate');if(v)save('other','Practice review: '+v);};function refresh(){try{$('dcaiDevelopmentReport').textContent=D.report(data,C.memoryRead(localStorage.getItem('dcaiConfirmedFactsV1')),C)+'\n'+window.DCAIFeedback.report(data);}catch{}}const old=renderAll;renderAll=function(){const r=old.apply(this,arguments);refresh();return r;};$('aiFoundation').addEventListener('close',refresh);$('dcaiDevelopmentAsk').onclick=()=>{$('aiFoundation').showModal();$('dcaiQuestion').value='My development';$('dcaiAsk').click();};refresh();})();</script><script>
 (function(root){'use strict';
 const DAY=86400000,keys=['scoring','doubles','checkout','bull'],targets=[41,46,52,60,68,76,81,90,101,110,120,130];
-function assessmentRows(p,key,now){const byDay=new Map();for(const a of [p?.assessment,...(Array.isArray(p?.assessmentHistory)?p.assessmentHistory:[])]){if(a?.finished!==true||a.version!==6||!Number.isFinite(a.completedAt)||a.completedAt>now||a.completedAt<now-112*DAY)continue;let value=null;
-if(key==='doubles'&&Array.isArray(a.doubles)&&a.doubles.length===20&&a.doubles.every((r,i)=>r.target==='D'+(i+1)&&Array.isArray(r.darts)&&r.darts.length===3&&r.darts.every(d=>d?.segment===r.target||d?.segment==='MISS')))value=a.doubles.reduce((s,r)=>s+r.darts.filter(d=>d.segment===r.target).length,0)/60;
-if(key==='checkout'&&Array.isArray(a.checkout)&&a.checkout.length===12&&a.checkout.every((r,i)=>r?.target===targets[i]&&typeof r.hit==='boolean'&&Number.isInteger(r.darts)&&r.darts>=1&&r.darts<=3&&(!r.hit?r.darts===3:true)))value=a.checkout.filter(r=>r.hit).length/12;
-if(value===null)continue;const day=new Date(a.completedAt).toDateString(),old=byDay.get(day);if(!old)byDay.set(day,{at:a.completedAt,value,conflict:false});else if(old.value!==value)old.conflict=true;}
-return [...byDay.values()].filter(r=>!r.conflict).sort((a,b)=>a.at-b.at);}
-function profile(p,F,now=Date.now()){return Object.fromEntries(keys.map(k=>{if(k==='scoring'||k==='bull')return [k,F.compare(p,k,now)];const r=assessmentRows(p,k,now);return [k,{key:k,assessmentDays:r.length,recent:r.at(-1)?.value??null,previous:r.at(-2)?.value??null,state:'assessment-only'}];}));}
-function completed(p,now){const all=(Array.isArray(p?.sessions)?p.sessions:[]).filter(s=>s&&s.id!=null&&Number.isFinite(s.start)&&s.start<=now&&s.start>=now-28*DAY);const counts=new Map();for(const s of all)counts.set(s.id,(counts.get(s.id)||0)+1);return all.filter(s=>counts.get(s.id)===1&&s.completed===true&&!s.extra&&!s.quick&&s.coachDayIntent?.dcaiAuto?.key&&s.coachDayIntent.focus===s.coachDayIntent.dcaiAuto.key);}
-function decide({player,F,now=Date.now(),intent,stored,extra,trial,mastery,preference,evidence,policy,practice}){if(stored||extra||trial||mastery||preference||!intent||intent.focus)return null;const hist=completed(player,now);if(hist.some(s=>s.start>=now-7*DAY)||new Set(hist.filter(s=>s.start>=now-14*DAY).map(s=>new Date(s.start).toDateString())).size>=2)return null;const vals=keys.map(k=>practice?.categories?.[k]?.seconds);if(vals.some(v=>!Number.isFinite(v)||v<0))return null;const total=vals.reduce((a,b)=>a+b,0);const candidates=['scoring','bull'].filter(k=>{const c=policy?.categories?.[k],r=F.compare(player,k,now);return c&&!c.overexposed&&!c.policySafety&&!c.learning?.protect&&evidence?.[k]?.ready===true&&r?.state==='lower'&&!(total>=3600&&practice.categories[k].seconds/total>=.4)&&!hist.some(s=>s.coachDayIntent.dcaiAuto.key===k);});candidates.sort((a,b)=>practice.categories[a].seconds-practice.categories[b].seconds||a.localeCompare(b));return candidates.length?{key:candidates[0],at:now,reason:'Repeated comparable measurements support a small practice adjustment.'}:null;}
+function assessmentRows(p,key,now,lookback=112){
+ const byDay=new Map();
+ for(const a of [p?.assessment,...(Array.isArray(p?.assessmentHistory)?p.assessmentHistory:[])]){
+  if(a?.finished!==true||a.version!==6||a.carriedForward||a.quick||a.recovery||a.challengeTuning||!Number.isFinite(a.completedAt)||a.completedAt>now||a.completedAt<now-lookback*DAY)continue;
+  let value=null;
+  if(key==='doubles'&&Array.isArray(a.doubles)&&a.doubles.length===20&&a.doubles.every((r,i)=>r?.target==='D'+(i+1)&&Array.isArray(r.darts)&&r.darts.length===3&&r.darts.every(d=>d?.segment===r.target||d?.segment==='MISS')))value=a.doubles.reduce((s,r)=>s+r.darts.filter(d=>d.segment===r.target).length,0)/60;
+  if(key==='checkout'&&Array.isArray(a.checkout)&&a.checkout.length===12&&a.checkout.every((r,i)=>r?.target===targets[i]&&typeof r.hit==='boolean'&&Number.isInteger(r.darts)&&r.darts>=1&&r.darts<=3&&(!r.hit?r.darts===3:true)))value=a.checkout.filter(r=>r.hit).length/12;
+  if(value===null)continue;
+  const day=new Date(a.completedAt).toDateString(),old=byDay.get(day);
+  if(!old)byDay.set(day,{at:a.completedAt,value,conflict:false});
+  else{old.at=Math.min(old.at,a.completedAt);if(old.value!==value)old.conflict=true;}
+ }
+ return [...byDay.values()].filter(r=>!r.conflict).sort((a,b)=>a.at-b.at);
+}
+function profile(p,F,now=Date.now()){return Object.fromEntries(keys.map(k=>{if(k==='scoring'||k==='bull')return [k,F.compare(p,k,now)];const r=assessmentRows(p,k,now);return [k,{...F.compare(p,k,now),assessmentDays:r.length,recent:r.at(-1)?.value??null,previous:r.at(-2)?.value??null,comparison:F.compare(p,k,now)}];}));}
+function completed(p,now,lookback=28){const all=(Array.isArray(p?.sessions)?p.sessions:[]).filter(s=>s&&s.id!=null&&Number.isFinite(s.start)&&s.start<=now&&s.start>=now-lookback*DAY);const counts=new Map();for(const s of all)counts.set(String(s.id),(counts.get(String(s.id))||0)+1);return all.filter(s=>counts.get(String(s.id))===1&&s.completed===true&&!s.extra&&!s.quick&&keys.includes(s.coachDayIntent?.dcaiAuto?.key)&&s.coachDayIntent.focus===s.coachDayIntent.dcaiAuto.key&&(s.coachDayIntent.dcaiAuto.version!==2||s.coachDayIntent.dcaiAutoAllocation?.status==='transferred'));}
+function decide({player,F,now=Date.now(),intent,stored,extra,trial,mastery,preference,evidence,policy,practice,availableKeys=keys}){
+ if(stored||extra||trial||mastery||preference||!intent||intent.focus||!Array.isArray(availableKeys))return null;
+ const hist=completed(player,now);
+ if(hist.some(s=>s.start>=now-7*DAY)||new Set(hist.filter(s=>s.start>=now-14*DAY).map(s=>new Date(s.start).toDateString())).size>=2)return null;
+ const vals=keys.map(k=>practice?.categories?.[k]?.seconds);if(vals.some(v=>!Number.isFinite(v)||v<0))return null;
+ const total=vals.reduce((a,b)=>a+b,0);
+ const longHist=completed(player,now,224);
+ const candidates=keys.filter(k=>{
+  if(!availableKeys.includes(k))return false;const c=policy?.categories?.[k];
+  if(!c||c.overexposed||c.policySafety||c.learning?.protect||evidence?.[k]?.ready!==true||(total>=3600&&practice.categories[k].seconds/total>=.4))return false;
+  if(hist.some(s=>s.coachDayIntent.dcaiAuto.key===k))return false;
+  const assessment=k==='doubles'||k==='checkout';
+  const r=F.compare(player,k,now);if(r?.state!=='lower')return false;
+  if(assessment){
+   const last=longHist.filter(s=>s.coachDayIntent.dcaiAuto.key===k).sort((a,b)=>b.start-a.start)[0];
+   // Reusing the same four-week assessments is not new evidence.
+   if(!Number.isFinite(r.latestAt)||now-r.latestAt>42*DAY||(last&&(now-last.start<112*DAY||r.latestAt<=last.start)))return false;
+  }
+  return true;
+ });
+ candidates.sort((a,b)=>practice.categories[a].seconds-practice.categories[b].seconds||a.localeCompare(b));
+ return candidates.length?{key:candidates[0],at:now,version:2,reason:'Repeated comparable measurements support a small practice adjustment.'}:null;
+}
 function transfer(names,lengths,key,category){if(!keys.includes(key)||!Array.isArray(names)||!Array.isArray(lengths)||names.length!==lengths.length||lengths.some(v=>!Number.isInteger(v)||v<5))return null;const cats=names.map(category),r=cats.findIndex(k=>k===key);if(r<0||lengths[r]>10)return null;const donor=lengths.map((v,i)=>({v,i})).filter(x=>x.i!==r&&cats[x.i]!==key&&x.v>=10).sort((a,b)=>b.v-a.v||a.i-b.i)[0];if(!donor)return null;const result=lengths.slice();result[r]+=5;result[donor.i]-=5;return result;}
-function report(p,F,now=Date.now()){const v=profile(p,F,now);return ['Development evidence: ',...keys.map(k=>{const r=v[k];return k==='doubles'||k==='checkout'?`${k}: ${r.assessmentDays} comparable full assessment days${r.recent===null?'':', latest '+(r.recent*100).toFixed(1)+'%'}.`:`${k}: ${r.recentDays} comparable practice days.`;}),'Your coach keeps practice balanced and reviews repeated measurements before adjusting optional focus.'].join('\n');}
+// Pure final-clock decision: this does not mutate the supplied plan.
+function finalTransfer(entries,key,policy,protectedNames=[]){
+ if(!keys.includes(key)||!Array.isArray(entries)||!Array.isArray(protectedNames))return null;
+ const categories=policy?.categories;if(!categories)return null;
+ const protectedCategory=k=>{const p=categories[k];return !p||p.policySafety||p.learning?.protect||p.learning?.permissionToEscalate;};
+ const valid=e=>e&&typeof e.name==='string'&&keys.includes(e.category)&&Number.isFinite(e.seconds)&&e.seconds>=300&&!protectedNames.includes(e.name)&&!e.protected;
+ const receiver=entries.map((e,i)=>({e,i})).filter(({e})=>valid(e)&&e.category===key&&e.seconds<=600&&!protectedCategory(key)&&!categories[key].overexposed).sort((a,b)=>a.e.seconds-b.e.seconds||a.i-b.i)[0];
+ if(!receiver)return null;
+ const donor=entries.map((e,i)=>({e,i})).filter(({e})=>valid(e)&&e.category!==key&&e.seconds>=600&&!protectedCategory(e.category)).sort((a,b)=>b.e.seconds-a.e.seconds||a.i-b.i)[0];
+ if(!donor)return null;
+ return {receiver:receiver.i,donor:donor.i,seconds:300,receiverName:receiver.e.name,donorName:donor.e.name,receiverBefore:receiver.e.seconds,donorBefore:donor.e.seconds};
+}
+// Called once after the base scheduler has met the actual clock budget and
+// applied its own protected duration choices. The language model is not involved.
+function applyFinal(s,queue,category,protectedNames,baseTransfer,competition,now=Date.now()){
+ const intent=s?.coachDayIntent,auto=intent?.dcaiAuto;
+ if(!auto||auto.version!==2)return null;
+ if(intent.dcaiAutoAllocation)return intent.dcaiAutoAllocation;
+ const decline=reason=>{const record={version:2,status:'withheld',key:auto.key,at:now,reason};intent.dcaiAutoAllocation=record;delete intent.dcaiAuto;if(intent.focus===auto.key)intent.focus=null;return record;};
+ if(!Number.isFinite(now)||!Number.isFinite(s.start)||!Number.isFinite(auto.at)||auto.at<s.start-DAY||auto.at>Math.min(now,s.start+120000)||now<s.start||now-s.start>DAY||new Date(now).toDateString()!==new Date(s.start).toDateString())return decline('session timing changed');
+ if(s.extra||s.quick||s.allocated||intent.focus!==auto.key||s.unifiedAudit?.exploration?.trial||s.wholeSessionAudit?.unified?.exploration?.trial||s.plan?.some(e=>e.name==='Target Mastery'||e.dc47TrialId)||baseTransfer?.status==='transferred')return decline('existing coaching decision protected');
+ if(competition&&competition.days>=0&&competition.days<=2)return decline('familiar competition preparation');
+ if(!Array.isArray(queue)||typeof category!=='function')return decline('no eligible allocation');
+ const ordinary=queue.filter(e=>e?.mode==='timed'&&e.wholeCoach&&category(e.name)===e.wholeCoach.category&&keys.includes(e.wholeCoach.category));
+ if(new Set(ordinary.map(e=>e.name)).size!==ordinary.length)return decline('ambiguous exercise identification');
+ const proposed=finalTransfer(ordinary.map(e=>({name:e.name,category:e.wholeCoach.category,seconds:e.seconds,protected:!!(e.coachDecision||e.dc47TrialId)})),auto.key,s.wholeSessionAudit?.policy,protectedNames);
+ if(!proposed)return decline('no safe five-minute transfer');
+ const receiver=ordinary[proposed.receiver],donor=ordinary[proposed.donor];
+ receiver.seconds+=300;donor.seconds-=300;
+ receiver.wholeCoach.plannedMinutes=receiver.seconds/60;donor.wholeCoach.plannedMinutes=donor.seconds/60;
+ const record={version:2,status:'transferred',key:auto.key,at:now,seconds:300,receiverName:receiver.name,donorName:donor.name,receiverBefore:proposed.receiverBefore,receiverAfter:receiver.seconds,donorBefore:proposed.donorBefore,donorAfter:donor.seconds};
+ intent.dcaiAutoAllocation=record;
+ return record;
+}
+function report(p,F,now=Date.now()){const v=profile(p,F,now);return ['Development evidence: ',...keys.map(k=>{const r=v[k];return k==='doubles'||k==='checkout'?`${k}: ${r.assessmentDays} comparable full assessment days${r.recent===null?'':', latest '+(r.recent*100).toFixed(1)+'%'}. ${r.comparison?.state==='higher'?'Repeated assessment results are higher.':'Building long-term comparable evidence.'}`:`${k}: ${r.recentDays} comparable practice days.`;}),'Your coach keeps practice balanced and reviews repeated measurements before adjusting optional focus.'].join('\n');}
 function command(q){return /^(?:review my coaching|review my training priorities|how is my coach adapting|my coaching plan)[?!.]*$/i.test(String(q).trim());}
-const api={assessmentRows,profile,completed,decide,transfer,report,command};if(typeof module!=='undefined')module.exports=api;else root.DCAIAutonomy=Object.freeze(api);
+const api={assessmentRows,profile,completed,decide,transfer,finalTransfer,applyFinal,report,command};if(typeof module!=='undefined')module.exports=api;else root.DCAIAutonomy=Object.freeze(api);
 })(globalThis);
 </script>
 <script>
 (function(root){'use strict';
-const DAY=86400000, skills=['scoring','bull'];
-function exposure(s,key,category,now){const seen=new Set();let seconds=0;for(const a of Array.isArray(s.activities)?s.activities:[]){if(!a||category(a.name)!==key||!a.exerciseId||!Number.isFinite(a.at)||a.at<s.start||a.at>now||!Number.isFinite(a.seconds)||a.seconds<1)continue;if(seen.has(a.exerciseId))return null;seen.add(a.exerciseId);seconds+=a.seconds;}return seconds;}
-function ledger(p,F,category,now=Date.now()) {const sessions=Array.isArray(p?.sessions)?p.sessions:[],ids=new Map(),assignments=new Map();for(const s of sessions){if(s?.id!=null)ids.set(String(s.id),(ids.get(String(s.id))||0)+1);const a=s?.coachDayIntent?.dcaiAuto;if(a&&skills.includes(a.key)&&Number.isFinite(a.at))assignments.set(a.at,(assignments.get(a.at)||0)+1);}const out=[];for(const s of sessions){const a=s?.coachDayIntent?.dcaiAuto;if(!a||!skills.includes(a.key)||s.id==null||ids.get(String(s.id))!==1||assignments.get(a.at)!==1||s.extra||s.quick||!Number.isFinite(s.start)||!Number.isFinite(a.at)||a.at>s.start||s.start-a.at>DAY||s.start>now||s.coachDayIntent.focus!==a.key||s.completed!==true)continue;const actual=exposure(s,a.key,category,now);if(actual===null||actual<300)continue;const midnight=new Date(s.start);midnight.setHours(0,0,0,0);const next=new Date(midnight);next.setDate(next.getDate()+1);const before=F.observations(p,a.key,+midnight-28*DAY,+midnight);const end=Math.min(now+1,+next+28*DAY);const after=F.observations(p,a.key,+next,end);const mean=x=>x.reduce((n,r)=>n+r.value,0)/x.length;const b=before.length?mean(before):null,c=after.length?mean(after):null;let state='collecting';if(now>=+next+28*DAY-1){state='insufficient';if(before.length>=7&&after.length>=7){const half=Math.floor(after.length/2),threshold=a.key==='scoring'?5:.1,changes=[mean(after.slice(0,half))-b,mean(after.slice(half))-b];state=changes.every(v=>v<=-threshold+1e-9)?'lower':changes.every(v=>v>=threshold-1e-9)?'higher':'mixed';}}out.push({id:s.id,key:a.key,at:a.at,start:s.start,actualSeconds:actual,beforeDays:before.length,afterDays:after.length,delta:b===null||c===null?null:c-b,state});}return out.sort((a,b)=>b.start-a.start);}
-function gate(candidate,rows,competition,now=Date.now()){if(!candidate)return null;if(competition&&competition.days>=0&&competition.days<=2)return null;const last=rows.find(r=>r.key===candidate.key);if(last&&last.state==='lower'&&now-last.start<56*DAY)return null;return candidate;}
+const DAY=86400000,skills=['scoring','bull','doubles','checkout'];
+const isAssessment=k=>k==='doubles'||k==='checkout';
+function exposure(s,key,category,now){
+ const all=Array.isArray(s.activities)?s.activities:[],seen=new Set();let seconds=0;
+ for(const a of all){if(!a?.exerciseId)continue;const id=String(a.exerciseId);if(seen.has(id))return null;seen.add(id);
+  if(category(a.name)!==key||!Number.isFinite(a.at)||a.at<s.start||a.at>now||!Number.isFinite(a.seconds)||a.seconds<1||a.seconds>3600)continue;
+  seconds+=a.seconds;
+ }
+ return seconds;
+}
+// A planned transfer is not delivered practice. New assignments require a
+// matching locked exercise and ACTUAL completed time; absent old provenance
+// cannot be substituted with an inferred five-minute improvement.
+function confirmedAllocation(s,a,category,now){
+ if(a.version!==2)return null;
+ const r=s.coachDayIntent?.dcaiAutoAllocation;
+ if(r?.version!==2||r.status!=='transferred'||r.key!==a.key||r.seconds!==300||!Number.isFinite(r.at)||r.at<Math.max(a.at,s.start)||r.at>now||r.at-s.start>DAY||category(r.receiverName)!==a.key||!skills.includes(category(r.donorName))||category(r.donorName)===a.key||![r.receiverBefore,r.receiverAfter,r.donorBefore,r.donorAfter].every(Number.isFinite)||r.receiverAfter-r.receiverBefore!==300||r.donorBefore-r.donorAfter!==300||r.receiverBefore<300||r.receiverAfter>900||r.donorAfter<300)return null;
+ const locked=s.provenanceLocked;
+ if(locked?.kind!=='post-allocation'||!Number.isFinite(locked.at)||locked.at<r.at||locked.at>now||!Array.isArray(locked.exercises))return null;
+ const entries=locked.exercises.filter(e=>e?.name===r.receiverName),donors=locked.exercises.filter(e=>e?.name===r.donorName);
+ if(entries.length!==1||donors.length!==1||entries[0].plannedSeconds!==r.receiverAfter||donors[0].plannedSeconds!==r.donorAfter||!entries[0].id||!donors[0].id||String(entries[0].id)===String(donors[0].id))return null;
+ const done=(Array.isArray(s.activities)?s.activities:[]).filter(e=>e?.exerciseId===entries[0].id);
+ if(done.length!==1)return null;const e=done[0];
+ if(e.name!==r.receiverName||e.plannedSeconds!==r.receiverAfter||!Number.isFinite(e.seconds)||e.seconds<r.receiverAfter-1||e.seconds>3600||!Number.isFinite(e.at)||e.at<locked.at||e.at>now)return null;
+ return {allocatedSeconds:300,receiverActualSeconds:e.seconds};
+}
+function ledger(p,F,category,now=Date.now()){
+ const sessions=Array.isArray(p?.sessions)?p.sessions:[],ids=new Map(),assignments=new Map();
+ for(const s of sessions){if(s?.id!=null)ids.set(String(s.id),(ids.get(String(s.id))||0)+1);const a=s?.coachDayIntent?.dcaiAuto;if(a&&skills.includes(a.key)&&Number.isFinite(a.at))assignments.set(a.at,(assignments.get(a.at)||0)+1);}
+ const out=[];
+ for(const s of sessions){const a=s?.coachDayIntent?.dcaiAuto;
+  if(!a||!skills.includes(a.key)||s.id==null||ids.get(String(s.id))!==1||assignments.get(a.at)!==1||s.extra||s.quick||!Number.isFinite(s.start)||!Number.isFinite(a.at)||a.at>now||s.start-a.at>DAY||a.at>s.start+(a.version===2?120000:0)||s.start>now||s.coachDayIntent.focus!==a.key||s.completed!==true)continue;
+  const allocation=confirmedAllocation(s,a,category,now);
+  if(a.version===2&&!allocation)continue;
+  const actual=exposure(s,a.key,category,now);if(actual===null||actual<300)continue;
+  const midnight=new Date(s.start);midnight.setHours(0,0,0,0);const next=new Date(midnight);next.setDate(next.getDate()+1);
+  const window=F.windowDays(a.key),begin=new Date(midnight),finish=new Date(next);begin.setDate(begin.getDate()-window);finish.setDate(finish.getDate()+window);
+  const before=F.observations(p,a.key,+begin,+midnight),after=F.observations(p,a.key,+next,Math.min(now+1,+finish));
+  const mean=x=>x.reduce((n,r)=>n+r.value,0)/x.length,b=before.length?mean(before):null,c=after.length?mean(after):null;
+  const state=now>=+finish-1?F.classify(a.key,before,after).state:'collecting';
+  out.push({id:s.id,key:a.key,at:a.at,start:s.start,actualSeconds:actual,allocatedSeconds:allocation?.allocatedSeconds??null,receiverActualSeconds:allocation?.receiverActualSeconds??null,beforeDays:before.length,afterDays:after.length,delta:b===null||c===null?null:c-b,state});
+ }
+ return out.sort((a,b)=>b.start-a.start);
+}
+function gate(candidate,rows,competition,now=Date.now()){
+ if(!candidate)return null;if(competition&&competition.days>=0&&competition.days<=2)return null;
+ const last=rows.find(r=>r.key===candidate.key);
+ if(last&&isAssessment(candidate.key)&&last.state==='collecting')return null;
+ if(last&&last.state==='lower'&&now-last.start<(isAssessment(candidate.key)?224:56)*DAY)return null;
+ return candidate;
+}
 function strategy(rows,competition){if(competition&&competition.days>=0&&competition.days<=2)return 'familiar-practice';if(rows.some(r=>r.state==='collecting'))return 'observe';return 'balanced';}
-function report(rows,competition){const s=strategy(rows,competition);return [`Coaching strategy: ${s==='familiar-practice'?'Familiar practice before competition.':s==='observe'?'Collecting comparable evidence after a practice adjustment.':'Balanced development.'}`,`Recorded completed adjustments: ${rows.length}.`,...rows.slice(0,5).map(r=>`${r.key}: ${Math.round(r.actualSeconds/60)} minutes recorded in the session; ${r.beforeDays} before and ${r.afterDays} follow-up measurement days. ${r.state==='higher'?'Repeated scores were higher.':'Review continues through the coaching process.'}`),'Observed changes cannot establish that the adjustment caused them.'].join('\n');}
+function report(rows,competition){const s=strategy(rows,competition);return [`Coaching strategy: ${s==='familiar-practice'?'Familiar practice before competition.':s==='observe'?'Collecting comparable evidence after a practice adjustment.':'Balanced development.'}`,`Recorded completed adjustments: ${rows.length}.`,...rows.slice(0,5).map(r=>`${r.key}: ${Math.round(r.actualSeconds/60)} minutes recorded in the session${r.allocatedSeconds===300?' (including a verified five-minute scheduling transfer)':''}; ${r.beforeDays} before and ${r.afterDays} follow-up measurement days. ${r.state==='higher'?'Repeated scores were higher.':'Review continues through the coaching process.'}`),'Observed changes cannot establish that the adjustment caused them.'].join('\n');}
 function command(q){return /^(?:review my coaching strategy|review my interventions|my long.term coaching plan)[?!.]*$/i.test(String(q).trim());}
-const api={exposure,ledger,gate,strategy,report,command};if(typeof module!=='undefined')module.exports=api;else root.DCAICareer=Object.freeze(api);
+const api={exposure,confirmedAllocation,ledger,gate,strategy,report,command};if(typeof module!=='undefined')module.exports=api;else root.DCAICareer=Object.freeze(api);
 })(globalThis);
 </script>
 </body></html>
